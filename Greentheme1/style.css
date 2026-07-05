@@ -1,5 +1,14 @@
 body {
-    background-color:rgb(104, 255, 200) ;
+    background-color: rgb(104, 255, 200);
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
 @font-face {
@@ -8,75 +17,97 @@ body {
 }
 
 @font-face {
-   font-family: yekan2;
+    font-family: yekan2;
     src: url(/fonts/yekan.ttf);
 }
 
+/* -------------------- animation -------------------- */
 
-/* stye haye sign in page */
-
-.signup-container {
-    height: 500px;
-    width: 600px;
-    background-color: rgb(0, 162, 124);
-    border-radius: 20px;
-    margin: 0 auto;margin-top: 100px;
-    resize: both;
+@keyframes showInput {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-.signup-container h3 {
+/* -------------------- shared styles -------------------- */
+
+.signup-container,
+.login-container {
+    width: 100%;
+    max-width: 600px;
+    min-height: 500px;
+    background-color: rgb(0, 162, 124);
+    border-radius: 20px;
+    margin: 60px auto 0;
+    padding: 20px;
+}
+
+.signup-container h3,
+.login-container h3 {
     text-align: center;
     color: white;
     font-family: yekan;
     padding-top: 15px;
     font-size: 24px;
+    margin: 0;
 }
 
-.signup-container h5 {
+.signup-container h5,
+.login-container h5 {
     color: white;
     font-family: yekan2;
     font-weight: 300;
     font-size: 16px;
     text-align: center;
+    margin: 10px 0 20px;
 }
 
-
-.signup {
+.signup,
+.login {
     margin: 0 auto;
-    height: 350px;
-    width: 400px;
+    width: 100%;
+    max-width: 430px;
+    min-height: 350px;
     background-color: rgba(0, 172, 120, 0.895);
-    border-radius: 10px;
+    border-radius: 12px;
     border: 3px solid rgba(255, 255, 255, 0.267);
+    padding: 20px;
 }
 
-
-.signup form {
-    display: grid;
-    justify-content: center;
-    padding-top: 20px;
+.signup form,
+.login form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding-top: 10px;
 }
-.signup input {
-    margin: 5px;
-    padding: 8px;
-    width: 250px;
+
+.signup input,
+.login input {
+    width: 100%;
+    max-width: 340px;
+    padding: 12px 14px;
     border-radius: 20px;
     font-family: yekan2;
     font-size: 14px;
-     border: 2px solid transparent;
-     outline: none;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-    animation: showInput 0.6s ease forwards ;
+    border: 2px solid transparent;
+    outline: none;
+    margin: 0;
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+    animation: showInput 0.6s ease forwards;
     opacity: 0;
     transform: translateY(10px);
 }
 
-
-.signup input:nth-child(1) {
+.signup input:nth-child(1),
+.login input:nth-child(1) {
     animation-delay: 0.1s;
 }
 
-.signup input:nth-child(2) {
+.signup input:nth-child(2),
+.login input:nth-child(2) {
     animation-delay: 0.2s;
 }
 
@@ -92,142 +123,106 @@ body {
     animation-delay: 0.5s;
 }
 
-
-@keyframes showInput {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.signup input:focus,
+.login input:focus {
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.85);
 }
 
-.signup input:focus {
-    box-shadow: 0 0 8px rgba(255, 255, 255, 0.851);
-}
-
-
-
-#submit {
-    margin: 5px;
-    padding: 10px;
-    font-family: yekan;
-    background-color: rgb(105, 31, 252);
-    color: white;
+#submit,
+#log-submit {
+    width: 100%;
+    max-width: 340px;
+    padding: 12px;
     border-radius: 20px;
+    font-family: yekan;
+    color: white;
     border: 3px solid rgba(255, 255, 255, 0.015);
     cursor: pointer;
-    animation: showInput 0.6s ease forwards ;
+    margin-top: 5px;
+    
+}
+
+#submit {
+    background-color: rgb(105, 31, 252);
+    animation: showInput 0.6s ease forwards;
     opacity: 0;
     transform: translateY(5px);
 }
 
-#submit:active {
-   
-  box-shadow: 0 5px #3681f9;
-  transform: translateY(4px);
-}
-
-
-/* -------------------------------------------------------- */
-
-
-
-/* style haye lgin page  */
-
-.login-container {
-    height: 500px;
-    width: 600px;
-    background-color: rgb(0, 162, 124);
-    border-radius: 20px;
-    margin: 0 auto;margin-top: 100px;
-}
-
-
-.login-container h3 {
-    text-align: center;
-    color: white;
-    font-family: yekan;
-    padding-top: 15px;
-    font-size: 24px;
-}
-
-.login-container h5 {
-    color: white;
-    font-family: yekan2;
-    font-weight: 300;
-    font-size: 16px;
-    text-align: center;
-}
-
-
-.login {
-    margin: 0 auto;
-    height: 350px;
-    width: 400px;
-    background-color: rgba(0, 172, 120, 0.895);
-    border-radius: 10px;
-    border: 3px solid rgba(255, 255, 255, 0.267);
-}
-
-
-.login form {
-    display: grid;
-    justify-content: center;
-    padding-top: 20px;
-}
-.login input {
-    margin: 5px;
-    padding: 8px;
-    width: 250px;
-    border-radius: 20px;
-    font-family: yekan2;
-    font-size: 14px;
-     border: 2px solid transparent;
-     outline: none;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-    animation: showInput 0.6s ease forwards ;
+#log-submit {
+    background-color: rgb(31, 108, 252);
+    animation: showInput 0.6s ease forwards;
     opacity: 0;
-    transform: translateY(10px);
+    transform: translateY(5px);
+    
 }
 
-
-.login input:nth-child(1) {
-    animation-delay: 0.1s;
+#submit:active,
+#log-submit:active {
+    box-shadow: 0 5px #3681f9;
+    transform: translateY(4px);
 }
 
-.login input:nth-child(2) {
-    animation-delay: 0.2s;
-}
+/* -------------------- tablet -------------------- */
 
-@keyframes showInput {
-    to {
-        opacity: 1;
-        transform: translateY(0);
+@media (max-width: 768px) {
+    .signup-container,
+    .login-container {
+        max-width: 90%;
+        margin-top: 40px;
+        padding: 18px;
+    }
+
+    .signup,
+    .login {
+        max-width: 100%;
+    }
+
+    .signup input,
+    .login input,
+    #submit,
+    #log-submit {
+        max-width: 100%;
     }
 }
 
+/* -------------------- mobile -------------------- */
 
-.login input:focus {
-    box-shadow: 0 0 8px rgba(255, 255, 255, 0.851);
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .signup-container,
+    .login-container {
+        max-width: 100%;
+        margin-top: 20px;
+        padding: 14px;
+        border-radius: 15px;
+        min-height: auto;
+    }
+
+    .signup,
+    .login {
+        padding: 15px 12px;
+        min-height: auto;
+    }
+
+    .signup-container h3,
+    .login-container h3 {
+        font-size: 20px;
+    }
+
+    .signup-container h5,
+    .login-container h5 {
+        font-size: 14px;
+    }
+
+    .signup input,
+    .login input,
+    #submit,
+    #log-submit {
+        font-size: 13px;
+        padding: 11px 12px;
+    }
 }
-
-
-
-#log-submit {
-    margin: 5px;
-    padding: 10px;
-    font-family: yekan;
-    background-color: rgb(31, 108, 252);
-    color: white;
-    border-radius: 20px;
-    border: 3px solid rgba(255, 255, 255, 0.015);
-    cursor: pointer;
-}
-
-#submit:active {
-   
-  box-shadow: 0 5px #3681f9;
-  transform: translateY(4px);
-}
-
-
-/* -------------------------------------------------------- */
