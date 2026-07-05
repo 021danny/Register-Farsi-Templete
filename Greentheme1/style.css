@@ -1,0 +1,233 @@
+body {
+    background-color:rgb(104, 255, 200) ;
+}
+
+@font-face {
+    font-family: yekan;
+    src: url(/fonts/YekanBakh-Black.woff2);
+}
+
+@font-face {
+   font-family: yekan2;
+    src: url(/fonts/yekan.ttf);
+}
+
+
+/* stye haye sign in page */
+
+.signup-container {
+    height: 500px;
+    width: 600px;
+    background-color: rgb(0, 162, 124);
+    border-radius: 20px;
+    margin: 0 auto;margin-top: 100px;
+    resize: both;
+}
+
+.signup-container h3 {
+    text-align: center;
+    color: white;
+    font-family: yekan;
+    padding-top: 15px;
+    font-size: 24px;
+}
+
+.signup-container h5 {
+    color: white;
+    font-family: yekan2;
+    font-weight: 300;
+    font-size: 16px;
+    text-align: center;
+}
+
+
+.signup {
+    margin: 0 auto;
+    height: 350px;
+    width: 400px;
+    background-color: rgba(0, 172, 120, 0.895);
+    border-radius: 10px;
+    border: 3px solid rgba(255, 255, 255, 0.267);
+}
+
+
+.signup form {
+    display: grid;
+    justify-content: center;
+    padding-top: 20px;
+}
+.signup input {
+    margin: 5px;
+    padding: 8px;
+    width: 250px;
+    border-radius: 20px;
+    font-family: yekan2;
+    font-size: 14px;
+     border: 2px solid transparent;
+     outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    animation: showInput 0.6s ease forwards ;
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+
+.signup input:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.signup input:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.signup input:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.signup input:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.signup input:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+
+@keyframes showInput {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.signup input:focus {
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.851);
+}
+
+
+
+#submit {
+    margin: 5px;
+    padding: 10px;
+    font-family: yekan;
+    background-color: rgb(105, 31, 252);
+    color: white;
+    border-radius: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.015);
+    cursor: pointer;
+    animation: showInput 0.6s ease forwards ;
+    opacity: 0;
+    transform: translateY(5px);
+}
+
+#submit:active {
+   
+  box-shadow: 0 5px #3681f9;
+  transform: translateY(4px);
+}
+
+
+/* -------------------------------------------------------- */
+
+
+
+/* style haye lgin page  */
+
+.login-container {
+    height: 500px;
+    width: 600px;
+    background-color: rgb(0, 162, 124);
+    border-radius: 20px;
+    margin: 0 auto;margin-top: 100px;
+}
+
+
+.login-container h3 {
+    text-align: center;
+    color: white;
+    font-family: yekan;
+    padding-top: 15px;
+    font-size: 24px;
+}
+
+.login-container h5 {
+    color: white;
+    font-family: yekan2;
+    font-weight: 300;
+    font-size: 16px;
+    text-align: center;
+}
+
+
+.login {
+    margin: 0 auto;
+    height: 350px;
+    width: 400px;
+    background-color: rgba(0, 172, 120, 0.895);
+    border-radius: 10px;
+    border: 3px solid rgba(255, 255, 255, 0.267);
+}
+
+
+.login form {
+    display: grid;
+    justify-content: center;
+    padding-top: 20px;
+}
+.login input {
+    margin: 5px;
+    padding: 8px;
+    width: 250px;
+    border-radius: 20px;
+    font-family: yekan2;
+    font-size: 14px;
+     border: 2px solid transparent;
+     outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    animation: showInput 0.6s ease forwards ;
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+
+.login input:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.login input:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+@keyframes showInput {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.login input:focus {
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.851);
+}
+
+
+
+#log-submit {
+    margin: 5px;
+    padding: 10px;
+    font-family: yekan;
+    background-color: rgb(31, 108, 252);
+    color: white;
+    border-radius: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.015);
+    cursor: pointer;
+}
+
+#submit:active {
+   
+  box-shadow: 0 5px #3681f9;
+  transform: translateY(4px);
+}
+
+
+/* -------------------------------------------------------- */
